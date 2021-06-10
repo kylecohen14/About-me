@@ -16,3 +16,5 @@ Building an about me webpage so tha the user can get to know me while anwsering 
 
 * Consider including the answers to your daily journal and submission questions here
 * This is also a good place to reflect on the tools and resources used and learned
+
+### Gina Hobbs was the driver for this assignment and Kyle Cohen was the navigator
