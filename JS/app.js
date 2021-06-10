@@ -1,17 +1,17 @@
 'use strict';
 
-let guessScore = 0
+let guessScore = 0;
 // proof of life
 console.log('hello');
 
-alert('Welcome!')
+alert('Welcome!');
 function userName1() {
   let userName = prompt('What is your name?');
   console.log('The users name is: ' + userName);
   while (userName === null || userName === ''){
     userName = prompt('Sorry I didn\'t get that, please enter your name.');
   }
-  let alertReturn = alert('Hey, thanks for visiting my page ' + userName + ' I hope you like it.');
+  alert('Hey, thanks for visiting my page ' + userName + ' I hope you like it.');
   return userName;
 }
 
@@ -26,7 +26,7 @@ function question1() {
 
   if (lowercaseQuestion1 === 'yes' || lowercaseQuestion1 === 'y') {
     alert('Awesome! You have lived a fulfilled life!');
-    guessScore++
+    guessScore++;
   } else if (lowercaseQuestion1 === 'no' || lowercaseQuestion1 === 'n') {
     alert('Dang, Please reach out and find someone to take you.');
   } else {
@@ -44,7 +44,7 @@ function question2() {
     alert('No way! Only zombies are real');
   } else if (lowercaseQuestion2 === 'no' || lowercaseQuestion2 === 'n') {
     alert('Good, theres nothing to worry about.');
-    guessScore++
+    guessScore++;
   } else {
     alert('I am confused by the response');
   }
@@ -58,7 +58,7 @@ function question3() {
 
   if (lowercaseQuestion3 === 'yes' || lowercaseQuestion3 === 'y') {
     alert('No way were the only ones, theyre watching us right now.');
-    guessScore++
+    guessScore++;
   } else if (lowercaseQuestion3 === 'no' || lowercaseQuestion3 === 'n') {
     alert('How do you explain the pyramids?');
   } else {
@@ -76,7 +76,7 @@ function question4() {
     alert('Show me some proof! No way.');
   } else if (lowercaseQuestion4 === 'no' || lowercaseQuestion4 === 'n') {
     alert('Correct!');
-    guessScore++
+    guessScore++;
   } else {
     alert('I am confused by the response');
   }
@@ -90,7 +90,7 @@ function question5() {
 
   if (lowercaseQuestion5 === 'yes' || lowercaseQuestion5 === 'y') {
     alert('Good! Its a good thing to know ' + nameUser);
-    guessScore++
+    guessScore++;
   } else if (lowercaseQuestion5 === 'no' || lowercaseQuestion5 === 'n') {
     alert('Better go get some lessons ' + nameUser);
   } else {
@@ -107,25 +107,25 @@ function guessingGame() {
     while (question6 < 1 || question6 > 70)  {  
       // not within range question6 = prompt()
     // console.log(correctAnswer)
-        question6 = prompt('Please follow instructions and guess a number between 1 and 70');
+      question6 = prompt('Please follow instructions and guess a number between 1 and 70');
     }
-        // console.log('this is the count', count)
+    // console.log('this is the count', count)
       
-      if (question6 == correctAnswer){
-        alert('Correct Guess!');
-        guessScore++
-        break;
-      } else if(question6 < correctAnswer){
-        alert('To low!');
-      } else if(question6 > correctAnswer){
-        alert('To High!')
-      } else {
-        alert('You did something wrong.')
-      }
-      console.log(count);
-      if (count == userAttempts - 1){
-        alert('You could not guess the correct answer. The correct answer is: ' + correctAnswer);
-      }
+    if (question6 == correctAnswer){
+      alert('Correct Guess!');
+      guessScore++;
+      break;
+    } else if(question6 < correctAnswer){
+      alert('To low!');
+    } else if(question6 > correctAnswer){
+      alert('To High!');
+    } else {
+      alert('You did something wrong.');
+    }
+    console.log(count);
+    if (count == userAttempts - 1){
+      alert('You could not guess the correct answer. The correct answer is: ' + correctAnswer);
+    }
   }
 }
 guessingGame();
@@ -136,7 +136,7 @@ function colorGame() {
 
   // inner loop starts here
 
-  let guesscount = 6
+  let guesscount = 6;
   let correct = false;
 
   while (correct === false && guesscount > 0) {
@@ -145,7 +145,7 @@ function colorGame() {
     for (let index=0; index < colorArray.length; index++) {
       if (lowercaseUsercolor === colorArray[index]) {
         alert('Nice job!');
-        guessScore++
+        guessScore++;
         correct = true;
         break;
       }
@@ -155,17 +155,17 @@ function colorGame() {
     // if (correct === false && guesscount == 1) {
     //   alert('Not correct');
     }
-    if (correct === false && guesscount == 1){
-      alert('You could not guess the correct answer! Possible answer were, ' + colorArray + '. Thats okay, go on to my page.')
+    if (correct === false && guesscount === 1){
+      alert('You could not guess the correct answer! Possible answer were, ' + colorArray + '. Thats okay, go on to my page.');
       correct = true;
     // if (guesscount == 1){
     //   alert('You could not guess the correct answer! Possible answer were, ' + colorArray + '. Thats okay, go on to my page.') THESE ARE MY NOTES on how i first had my code incase i needed to go back to my orignal input
     }
-    guesscount = guesscount -1
-    console.log('This is user attempt ' + (6 - guesscount) + ' and they guessed ' + usercolor)
+    guesscount = guesscount -1;
+    console.log('This is user attempt ' + (6 - guesscount) + ' and they guessed ' + usercolor);
     
   }
 }
 colorGame();
 
-alert("Great job. You have scored " + guessScore + " out of 7")
+alert("Great job. You have scored " + guessScore + " out of 7");
