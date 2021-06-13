@@ -138,7 +138,7 @@ function colorGame() {
 
   let guesscount = 6;
   let correct = false;
-
+  
   while (correct === false && guesscount > 0) {
     let usercolor= prompt('What is my favorite color?');
     let lowercaseUsercolor= usercolor.toLowerCase();
